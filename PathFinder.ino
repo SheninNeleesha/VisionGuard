@@ -95,14 +95,14 @@ void setup() {
 void loop() {
   grabDistances();
   mapMotors();
-  int dat=distance[4];
-  Serial.println(dat);
-  /*
-  for(int si=0; si<4; si++){
+  for(int si=0; si<=4; si++){
     int dat=distance[si];
+    Serial.print(" Sensor(");
+    Serial.print( si + 1 );
+    Serial.print(") : [ ");
     Serial.print(dat);
-    Serial.println();
+    Serial.print("mm ]");
   }
-  */
+  Serial.println();
   delay(10);
 }
